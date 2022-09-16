@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/svg/rocket.svg" type="image/svg" />
+    <title>Countdown</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/673aed7dea.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="flex">
+    <div id="top-wave" class="wave"></div>
+    <header>
+      <nav>
+        <p>
+          Made with 💜 by
+          <a href="https://github.com/joaovic-tech" target="_blank" class="flex"
+            >João Victor <i class="fa-brands fa-github"></i
+          ></a>
+        </p>
+      </nav>
+    </header>
+    <main id="container" class="flex">
+      <section class="cont">
+        <h1 id="title">Ready to launch in...</h1>
+        <ul id="time-count">
+          <li>
+            <small>Dias</small>
+            <h2 id="days" class="duration">00</h2>
+          </li>
+          <li class="two-pointers">:</li>
+          <li>
+            <small>Horas</small>
+            <h2 id="hours" class="duration">00</h2>
+          </li>
+          <li class="two-pointers">:</li>
+          <li>
+            <small>Minutos</small>
+            <h2 id="minutes" class="duration">00</h2>
+          </li>
+          <li class="two-pointers">:</li>
+          <li>
+            <small>Segundos</small>
+            <h2 id="seconds" class="duration">00</h2>
+          </li>
+        </ul>
+        <p>Inscreva-se para saber mais do lançamento</p>
+        <div class="flex container-btn">
+          <button
+            type="button"
+            onclick="showModal('modal-email')"
+            id="btn-modal"
+            class="flex btn"
+          >
+            Inscreva-se
+          </button>
+          <button
+            type="button"
+            onclick="showModal('modal-timer')"
+            id="btn-modal"
+            class="flex btn"
+          >
+            New Date
+          </button>
+        </div>
+      </section>
+      <section id="rp">
+        <div id="rocket">
+          <img src="./assets/svg/rocket.svg" alt="" />
+        </div>
+        <div id="planet-cont">
+          <img
+            src="./assets/svg/planet-rocketseat.svg"
+            alt="planet-rocketseat"
+          />
+        </div>
+      </section>
+    </main>
+    <aside id="modal-email" class="modal flex">
+      <form action="">
+        <nav>
+          <i class="fa-solid fa-xmark" onclick="showModal('modal-email')"></i>
+        </nav>
+        <section class="flex">
+          <div class="box flex">
+            <i class="fa-solid fa-user"></i>
+            <div class="box-input">
+              <input type="text" class="input" name="name" id="name" required />
+              <label>Nome</label>
+            </div>
+          </div>
+          <div class="box flex">
+            <i class="fa-solid fa-envelope"></i>
+            <div class="box-input">
+              <input
+                type="email"
+                class="input"
+                name="email"
+                id="email"
+                required
+              />
+              <label>Email</label>
+            </div>
+          </div>
+          <p>Deixe aqui seu feedback! 😊</p>
+          <div class="box flex">
+            <div class="box-input">
+              <textarea
+                name="message"
+                class="input"
+                id="message"
+                rows="4"
+                cols="50"
+              ></textarea>
+              <label for="message" id="lm"
+                ><i class="fa-regular fa-comments"></i> Mensagem</label
+              >
+            </div>
+          </div>
+          <button type="submit" class="btn">Enviar</button>
+        </section>
+      </form>
+    </aside>
+    <aside id="modal-timer" class="modal flex">
+      <form action="" id="form-timer">
+        <nav>
+          <i class="fa-solid fa-xmark" onclick="showModal('modal-timer')"></i>
+        </nav>
+        <section class="flex">
+          <p>Digite a data para um novo lançamento</p>
+          <div class="box flex">
+            <i class="fa-solid fa-calendar-days"></i>
+            <div class="box-input">
+              <input
+                type="number"
+                min="1"
+                max="12"
+                class="input"
+                name="name"
+                id="input-month"
+                required
+              />
+              <label>Mês</label>
+            </div>
+          </div>
+          <div class="box flex">
+            <i class="fa-solid fa-calendar"></i>
+            <div class="box-input">
+              <input
+                type="number"
+                min="0"
+                max="31"
+                class="input"
+                name="name"
+                id="input-day"
+                required
+              />
+              <label>Dia</label>
+            </div>
+          </div>
+          <div class="box flex">
+            <i class="fa-regular fa-clock"></i>
+            <div class="box-input">
+              <input
+                type="number"
+                min="0"
+                max="24"
+                class="input"
+                name="name"
+                id="input-hours"
+                required
+              />
+              <label>Horas</label>
+            </div>
+          </div>
+          <div class="box flex">
+            <i class="fa-solid fa-hourglass-half"></i>
+            <div class="box-input">
+              <input
+                type="number"
+                min="0"
+                max="60"
+                class="input"
+                name="name"
+                id="input-minutes"
+                required
+              />
+              <label>Minutos</label>
+            </div>
+          </div>
+          <button type="submit" class="btn">Enviar</button>
+        </section>
+      </form>
+    </aside>
+    <div id="bottom-wave" class="wave"></div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

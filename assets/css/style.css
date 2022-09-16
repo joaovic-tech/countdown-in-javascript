@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --black: #4d4c59;
+  --purple: #6c63ff;
+  --purple-dark: #4640a8;
+  --red: #d22828;
+  --light-grey: #c8c8c8;
+  --text-color: #9c9ab6;
+}
+
+body {
+  height: 100vh;
+  padding: 1.5rem;
+  background: whitesmoke;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cont {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 0;
+}
+
+#top-wave {
+  top: 0;
+  background: url(../svg/top-wave.svg) no-repeat;
+}
+
+#bottom-wave {
+  width: 100%;
+  height: 30vh;
+  bottom: 0;
+  background: url(../svg/bottom-wave.svg) no-repeat;
+  z-index: 0;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vh;
+  padding: 1rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: end;
+}
+
+header nav p {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--black);
+  font-weight: 500;
+}
+
+header nav p a {
+  text-decoration: none;
+  gap: 0.2rem;
+  color: var(--purple);
+  transition: 0.3s linear;
+}
+
+header nav p a:hover,
+header nav p a:focus {
+  color: var(--purple-dark);
+}
+
+main,
+aside {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+h1,
+h3 {
+  font-size: 2.25rem;
+  letter-spacing: 3px;
+  color: var(--purple);
+}
+
+#time-count {
+  list-style: none;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  gap: 1rem;
+}
+
+#time-count li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+small {
+  color: var(--light-grey);
+}
+
+#time-count li h2,
+#time-count li.two-pointers {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--black);
+}
+
+p {
+  color: var(--text-color);
+  font-weight: 300;
+}
+
+.btn {
+  text-decoration: none;
+  margin: auto;
+  width: 160px;
+  height: 38px;
+  background: var(--purple);
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--purple-dark);
+}
+
+#rp,
+#planet-cont {
+  position: relative;
+}
+
+#planet-cont img {
+  width: 100%;
+}
+
+#rocket {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+#rocket img {
+  width: 30%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transform: translateX(-100%);
+  transition: 0.32s linear;
+}
+
+#modal-timer.show,
+#modal-email.show {
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateX(0%);
+}
+
+#modal-timer form,
+#modal-email form {
+  width: 80%;
+  height: 80%;
+  border-radius: 0.6rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+form nav {
+  width: 100%;
+  height: 2vh;
+  justify-content: end;
+  display: flex;
+  padding: 1rem 1.5rem 0 0;
+}
+
+form nav i {
+  font-size: 1.2rem;
+  color: var(--light-grey);
+  cursor: pointer;
+}
+
+form nav i:hover,
+form nav i:focus {
+  color: var(--red);
+}
+
+#modal-timer form section,
+#modal-email form section {
+  display: grid;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+form p {
+  color: var(--text-color);
+}
+
+.box {
+  gap: 1rem;
+}
+
+.box i {
+  color: var(--purple);
+}
+
+.box-input {
+  position: relative;
+  padding-top: 13px;
+}
+
+.input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  color: var(--light-grey);
+  border-bottom: 0.2rem solid var(--light-grey);
+  border-radius: 0.2rem;
+  padding-left: 0.6rem;
+  background: transparent;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-appearance: none;
+}
+
+#message {
+  resize: none;
+  border: 0.2rem solid lightgrey;
+}
+
+.box-input .input:focus {
+  border-bottom: 0.2rem solid #3951b2;
+}
+
+.box-input #message:focus {
+  border: 2px solid #3951b2;
+}
+
+.box-input .input::placeholder {
+  color: transparent;
+}
+
+.box-input label {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 0.6rem;
+  margin-top: 13px;
+  color: var(--light-grey);
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+
+#lm {
+  color: var(--light-grey);
+}
+
+.box-input .input:focus:required:invalid + label {
+  color: var(--red);
+}
+
+.box-input .input:focus:required:invalid {
+  border-bottom: 0.2rem solid var(--red);
+}
+
+.box-input .input.up + label,
+.box-input .input:valid + label,
+.box-input .input:focus + label {
+  font-size: 13px;
+  margin-top: -0.4rem;
+  color: var(--light-grey);
+}
+
+input:focus:required:invalid ~ label::after {
+  content: " (obrigatório)";
+  font-size: 0.8em;
+  color: #000;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#input-month:focus:required:invalid ~ label::after {
+  content: " (entre 1 à 12 meses)";
+}
+#input-day:focus:required:invalid ~ label::after {
+  content: " (entre 1 à 31 dias)";
+}
+#input-hours:focus:required:invalid ~ label::after {
+  content: " (entre 0 à 24 horas)";
+}
+#input-minutes:focus:required:invalid ~ label::after {
+  content: " (entre 0 à 60 minutos)";
+}
+
+@media (max-width: 1250px) {
+  body {
+    overflow-y: none;
+  }
+
+  #container {
+    margin-top: 8rem;
+    display: grid;
+    gap: 2rem;
+  }
+
+  #bottom-wave {
+    bottom: -16rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #bottom-wave {
+    bottom: -13rem;
+  }
+}
+
+@media (max-width: 520px) {
+  #bottom-wave {
+    bottom: -6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #time-count {
+    gap: 0;
+  }
+
+  #time-count li h2,
+  #time-count li.two-pointers {
+    font-size: 1.5rem;
+  }
+
+  .container-btn {
+    display: grid;
+    gap: 2rem;
+  }
+
+  #bottom-wave {
+    bottom: -12rem;
+  }
+}
+
+@media (max-width: 320px) {
+  #time-count {
+    flex-direction: column;
+  }
+
+  #title {
+    font-size: 1.5rem;
+  }
+
+  #bottom-wave {
+    bottom: -22rem;
+  }
+}
