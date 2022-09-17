@@ -4,9 +4,10 @@
 
 </div>
 
-| Desktop | Mobile |
-|:--------------------------------:|:----------------------------:|
-| ![](./template/web-desktop.png)  | ![](./template/web-mobile.png)
+
+| Template 🚀 |
+|:--------------------------------:|
+| ![](./template/template.png)
 
 <p align="center">
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
