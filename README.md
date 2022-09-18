@@ -47,7 +47,7 @@
 ## 💻 Getting started
 
 ```git
-git clone https://github.com/rafaeljurkfitz/countdown.git
+git clone https://github.com/joaovic-tech/countdown-in-javascript.git
 ```
 
 ## 📃 License
